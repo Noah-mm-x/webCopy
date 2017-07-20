@@ -1,0 +1,41 @@
+
+#main1 { padding-top:10px; width:998px; margin:auto; font-size:12px;}
+.clearfix1 { zoom:1;}
+.clearfix1:after { content:"."; display:block; clear:both; height:0; overflow:hidden; visibility:hidden;}
+
+
+/*----鐧诲綍娉ㄥ唽------*/
+.logreg { border:1px solid #ddd; margin-bottom:10px; background:#fff url(../images/log_nav_bg.gif) repeat-y 0 0;}
+.logreg_nav { float:left; width:228px; padding:60px 0;}
+.logreg_nav li { background:url(../images/log_nav_lixian.gif) no-repeat center top;}
+.logreg_nav li a { display:block; width:148px; padding-left:40px; height:70px; line-height:70px; font-size:20px; background:url(../images/log_nav_lixian.gif) no-repeat center bottom;}
+.logreg_nav li a.dangqian { background:url(log_nav_libg.gif) no-repeat right center; color:#00a0f3;}
+.logreg_nav li a:hover { color:#0084f3; text-decoration:none;}
+
+.logreg_con { float:right; width:730px; padding:20px 20px 50px 20px;}
+.logreg_con h2 { border-bottom:2px solid #eee; padding-bottom:10px; margin-bottom:20px; font-size:18px; font-weight:normal;}
+.logreg_con ul { margin-bottom:20px; padding-top:10px;}
+.logreg_con ul li { margin-bottom:15px; zoom:1;}
+.logreg_con ul li:after { content:"."; display:block; clear:both; height:0; overflow:hidden; visibility:hidden;}
+.logreg_con ul li .mn_infobox { float:left; width:150px; text-align:right; font-size:16px; height:42px; line-height:42px;}
+.logreg_con ul li input.text-input { float:left; width:220px; height:30px; line-height:30px; padding:5px; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; border:1px solid #ccc; background-color:#fff; margin-right:5px;}
+.logreg_con ul li input.text-input:focus { border-color:rgba(82,168,236,0.8); outline:0; outline:thin dotted \9; -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6); -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6); box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);}
+.logreg_con ul li span { float:left; color:#999; display:inline-block; height:42px; line-height:42px; padding-left:20px; background:url(../images/reg_ts.gif) no-repeat 0 13px;}
+.logreg_con ul li span.success { background-position:0 -75px;}
+.logreg_con ul li span.error { background-position:0 -31px;}
+.logreg_con ul li .tijiao { width:159px; height:51px; line-height:51px; text-align:center; color:#fff; border:none; background:url(../images/logreg_b.gif) no-repeat 0 0; font-size:20px; font-family:"寰蒋闆呴粦";}
+.logreg_con ul li .tijiao:hover { background:url(logreg_b.gif) no-repeat 0 -51px;}
+.plwid { padding-left:150px;}
+#zhuangt,#cookietime { margin-right:3px; vertical-align:middle;}
+.logreg_con ul li .wjmm { margin-left:10px; color:#f60;}
+.logreg_con ul li .wjmm:hover { color:#f60; text-decoration:underline;}
+.qtzh { padding:10px 0 10px 150px; font-size:14px;}
+.qtzh a { display:inline-block; margin:0 3px;}
+.qtzh img { vertical-align:middle;}
+.logreg_con .zhtx { background-color:#FFF7F2; border:1px solid #FFEFE4; margin-bottom:15px; padding:10px; font-size:14px;}
+.logreg_con .shenftx { border-top:1px solid #eee; border-bottom:1px solid #eee; padding:15px 0; color:#425d78;}
+.logreg_con ul li.reg_yzm input { width:69px;}
+.logreg_con ul li.reg_yzm img { float:left; vertical-align:middle; margin-right:5px;}
+.logreg_con ul li.reg_yzm a { float:left; height:42px; line-height:42px; margin-right:5px;}
+.logreg_con .kfqq p { margin-bottom:10px; font-size:14px;}
+.logreg_con .kfqq img { float:left; margin-right:5px;}

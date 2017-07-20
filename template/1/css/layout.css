@@ -1,0 +1,126 @@
+#main {
+	WIDTH: 738px
+}
+#header {
+	HEIGHT: 420px
+}
+#footer {
+	HEIGHT: 61px
+}
+.column1 {
+	WIDTH: 738px; FLOAT: left
+}
+.column2 {
+	WIDTH: 738px; FLOAT: left
+}
+.column3 {
+	WIDTH: 738px; FLOAT: left
+}
+.indent_column {
+	WIDTH: 738px; FLOAT: left
+}
+.col1 {
+	WIDTH: 738px; FLOAT: left
+}
+.col2 {
+	WIDTH: 738px; FLOAT: left
+}
+.col3 {
+	WIDTH: 738px; FLOAT: left
+}
+.ind_col {
+	WIDTH: 738px; FLOAT: left
+}
+#index .columns1 .column1 {
+	WIDTH: 241px
+}
+#index .columns1 .column2 {
+	WIDTH: 242px
+}
+#index .columns1 .column3 {
+	WIDTH: 241px
+}
+#index .columns1 .indent_column {
+	WIDTH: 7px
+}
+#index .ver_line {
+	WIDTH: 100%; BACKGROUND: url(ver_line.gif) repeat-y 493px 0px
+}
+#index .columns2 .column1 {
+	BACKGROUND-COLOR: #ffffff; WIDTH: 100%
+}
+#index .columns2 .column2 {
+	WIDTH: 245px
+}
+#index_1 #middle .column1 {
+	WIDTH: 496px
+}
+#index_1 #middle .column2 {
+	WIDTH: 241px
+}
+#index_1 .col1 {
+	WIDTH: 206px
+}
+#index_1 .col2 {
+	WIDTH: 207px
+}
+#index_1 .ind_col {
+	WIDTH: 42px
+}
+#index_2 .columns1 .column1 {
+	TEXT-ALIGN: left; WIDTH: 100%
+}
+#index_2 .columns1 .column2 {
+	WIDTH: 241px
+}
+#index_2 .columns1 .indent_column {
+	WIDTH: 7px
+}
+#index_2 .ver_line {
+	WIDTH: 100%; BACKGROUND: url(ver_line.gif) repeat-y 493px 0px
+}
+#index_2 .columns2 .column1 {
+	WIDTH: 493px
+}
+#index_2 .columns2 .column2 {
+	WIDTH: 245px; BACKGROUND: url(ver_line.gif) repeat-y left 50%
+}
+#index_3 #middle .column1 {
+	WIDTH: 496px
+}
+#index_3 #middle .column2 {
+	WIDTH: 745px
+}
+#index_3 .col1 {
+	WIDTH: 206px
+}
+#index_3 .col2 {
+	WIDTH: 207px
+}
+#index_3 .ind_col {
+	WIDTH: 42px
+}
+#index_4 #middle .column1 {
+	WIDTH: 496px
+}
+#index_4 #middle .column2 {
+	WIDTH: 241px
+}
+#index_4 .col1 {
+	WIDTH: 206px
+}
+#index_4 .col2 {
+	WIDTH: 207px
+}
+#index_4 .ind_col {
+	WIDTH: 42px
+}
+#index_5 .columns1 .column1 {
+	WIDTH: 241px
+}
+#index_5 .columns1 .column2 {
+	WIDTH: 490px
+}
+#index_5 .columns1 .indent_column {
+	WIDTH: 7px
+}

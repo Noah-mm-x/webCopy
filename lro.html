@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./template/1/js/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<link href="./template/1/css/style-other.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <body onload="check_data();">
+	<div class="main">
+
+		<div class="header" >
+			<div class="uf"><img width="173" height="46" src="/template/1/images/logo_m.png" alt="logo" /></div>
+            <div class="ur"><a class="btn btn-primary btn-large theme-login" href="javascript:;">已注册登录</a></div>
+		</div>
+		<p></p>
+			<form>
+				<ul class="left-form">
+					<h2>新账户:</h2>
+					<li>
+						<input type="text" maxlength="16" onblur="check_id(this.value);"   placeholder="用户名" name="username" required/>
+						<span class="icon ticker">请添写真实姓名</span>
+                        <div class="clear"></div>
+                        
+					</li> 
+				  
+					<li>
+						<input type="password"   placeholder="设置密码" onblur="check_password();" required/>
+						<span  class="icon ticker">密码在6位以上</span>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="password"   placeholder="密码确认"onblur="check_pw();" />
+						<span class="icon ticker">再次输入密码</span>
+						<div class="clear"> </div>
+					</li> 
+                    <li>
+						<input type="text"  onblur="check_email(this.value)"  placeholder="邮箱地址" required/>
+						<span class="icon ticker">用于邮箱验证</span>
+						<div class="clear"> </div>
+					</li> 
+                    <li>
+						<input type="text"  onblur="checkcode(this.value);"/  placeholder="验证码" required/>
+						<span class="icon ticker"></span>
+						<div class="clear"> </div>
+					</li>
+                    <li>
+						<FONT style="font-size:12px;">   看不清楚?请点击右侧图片刷新</FONT>
+						<span  class="icon ticker"><img src="/template/1/getcode.asp" id="src" height="20" alt="看不清楚?请点击刷新" onclick="this.src=this.src+'?'+Math.random();"/></span>
+					  <div class="clear"> </div>
+				  </li>
+					<li><label onclick="accept_info();"><input type="radio" name="info"/>接受</label>
+				<label onclick="refuse_info();"><input type="radio" name="info"/>不接受</label> 
+				<input type="button" value="阅读协议" class="button" /><div class="clear"> </div></li>
+					<input type="submit" value="注册"  onclick="sendinfo($('input')[0].value,$('input')[1].value,$('input')[3].value)" />
+			
+						<span></span><div class="clear"> </div>
+				</ul>
+				<ul class="right-form" style="text-align:center;">
+                <li style="padding:10px 10px;">最新加入会员</li>
+					<li>
+                    
+<script src="1.asp?cc=2323,2322,4,1,1234,0000&ss=18d7f14d34b8250e"></script>
+                   </li>
+				</ul>
+				<div class="clear"> </div>
+					
+			</form>
+			
+		</div>
+ <div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+          <h3>登录 是一种态度</h3>
+     </div>
+     <div class="theme-popbod dform">
+           <form class="theme-signin" name="form1" action="/login/login1.asp" method="post">
+                <ol>
+                     <li><h4>你必须先登录！</h4></li>
+                     <li><strong>用 户 名：</strong><input class="ipt" type="text" name="UsernameGet" value="请输入用户名" size="20" /></li>
+                     <li><strong>会员密码：</strong><input class="ipt" type="password" name="PasswordGet" value="***" size="20" /></li>
+                     <li><strong>验 证 码：</strong><input class="ipt" type="text" name="Verifycode" value="" size="10" /><img src="/template/1/getcode.asp" id="src" height="20" alt="看不清楚?请点击刷新" onclick="this.src=this.src+'?'+Math.random();"/></li></li>
+                     <li>
+                   <input name="Websen_Action" type="hidden" id="Websen_Action" value="Websen_Add" />  
+                     <input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
+                </ol>
+           </form>
+     </div>
+</div>
+<div class="theme-popover-mask"></div>
+			<!-----start-copyright---->
+   					<div class="copy-right">
+						<p> </p> 
+					</div>
+				<!-----//end-copyright---->
+
+	
+</body>
+</html>
