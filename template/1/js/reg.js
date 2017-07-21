@@ -2,20 +2,20 @@
 var lastUserName = lastPassword = lastEmail = lastSecCode = lun = '';
 function checkUserName() {
     var userName = $('#username').val();
-    if (userName == lastUserName || userName == '鐢ㄦ埛鍚�') {
+    if (userName == lastUserName || userName == '用户名') {
         return;
     } else {
         lastUserName = userName;
     }
     var unLen = userName.replace(/[^\x00-\xff]/g, "**").length;
     if (unLen < 3 || unLen > 15) {
-        warning("checkusername", unLen < 3 ? '鐢ㄦ埛鍚嶅皬浜�3涓瓧绗�' : '鐢ㄦ埛鍚嶈秴杩�15涓瓧绗�', "show", "error");
-	}
-		else{
-		warning("checkusername", "", "show", "success");
-		return;
+        warning("checkusername", unLen < 3 ? '用户名小于3个字符' : '用户名超过15个字符', "show", "error");
     }
-	
+        else{
+        warning("checkusername", "", "show", "success");
+        return;
+    }
+    
 
 }
 
@@ -25,11 +25,11 @@ function checkEmail() {
     res = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
     var re = new RegExp(res);
     if (email.match(re) == null) {
-        warning("checkEmail", "璇疯緭鍏ユ纭殑Email", "show", "error");
+        warning("checkEmail", "请输入正确的Email", "show", "error");
         return;
 
     }
-    else if (email == lastEmail || email == '甯哥敤閭') {
+    else if (email == lastEmail || email == '常用邮箱') {
         return;
     } else {
         warning("checkEmail", "", "show", "success");
@@ -37,18 +37,18 @@ function checkEmail() {
 }
 
 function checkCard() {
-    var aCity = { 11: "鍖椾含", 12: "澶╂触", 13: "娌冲寳", 14: "灞辫タ", 15: "鍐呰挋鍙�", 21: "杈藉畞", 22: "鍚夋灄", 23: "榛戦緳姹�", 31: "涓婃捣", 32: "姹熻嫃", 33: "娴欐睙", 34: "瀹夊窘", 35: "绂忓缓", 36: "姹熻タ", 37: "灞变笢", 41: "娌冲崡", 42: "婀栧寳", 43: "婀栧崡", 44: "骞夸笢", 45: "骞胯タ", 46: "娴峰崡", 50: "閲嶅簡", 51: "鍥涘窛", 52: "璐靛窞", 53: "浜戝崡", 54: "瑗胯棌", 61: "闄曡タ", 62: "鐢樿們", 63: "闈掓捣", 64: "瀹佸", 65: "鏂扮枂", 71: "鍙版咕", 81: "棣欐腐", 82: "婢抽棬", 91: "鍥藉" } 
+    var aCity = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外" } 
     var iSum = 0;
     var info = "";
     var sId = $("#shenfz").val();
-    if (!/^\d{17}(\d|x)$/i.test(sId)) info = "浣犺緭鍏ョ殑韬唤璇侀暱搴︽垨鏍煎紡閿欒";
+    if (!/^\d{17}(\d|x)$/i.test(sId)) info = "你输入的身份证长度或格式错误";
     sId = sId.replace(/x$/i, "a");
-    if (aCity[parseInt(sId.substr(0, 2))] == null) info = "浣犵殑韬唤璇佸湴鍖洪潪娉�";
+    if (aCity[parseInt(sId.substr(0, 2))] == null) info = "你的身份证地区非法";
     sBirthday = sId.substr(6, 4) + "-" + Number(sId.substr(10, 2)) + "-" + Number(sId.substr(12, 2));
     var d = new Date(sBirthday.replace(/-/g, "/"));
-    if (sBirthday != (d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate())) info = "韬唤璇佷笂鐨勫嚭鐢熸棩鏈熼潪娉�";
+    if (sBirthday != (d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate())) info = "身份证上的出生日期非法";
     for (var i = 17; i >= 0; i--) iSum += (Math.pow(2, i) % 11) * parseInt(sId.charAt(17 - i), 11);
-    if (iSum % 11 != 1) info = "浣犺緭鍏ョ殑韬唤璇佸彿闈炴硶";
+    if (iSum % 11 != 1) info = "你输入的身份证号非法";
     if (info != "")
         warning("checkshenfz", info, "show", "error");
     else
@@ -64,8 +64,8 @@ function checkPassword() {
     }
     //var cp = $('#checkpassword');
     if (password == '' || /[\'\"\\]/.test(password)) {
-        //warning(cp, '瀵嗙爜绌烘垨鍖呭惈闈炴硶瀛楃');
-        warning("checkpassword", "瀵嗙爜绌烘垨鍖呭惈闈炴硶瀛楃", "show", "error");
+        //warning(cp, '密码空或包含非法字符');
+        warning("checkpassword", "密码空或包含非法字符", "show", "error");
         return false;
     } else {
         warning("checkpassword", "&nbsp;", "show", "success");
@@ -86,7 +86,7 @@ function checkPassword2() {
         return;
     }
     if (password != password2) {
-        warning("checkpassword2", "涓ゆ杈撳叆鐨勫瘑鐮佷笉涓€鑷�", "show", "error");
+        warning("checkpassword2", "两次输入的密码不一致", "show", "error");
 
     } else {
         warning("checkpassword2", "&nbsp;", "show", "success");
@@ -96,13 +96,13 @@ function checkPassword2() {
 
 
 function checkName() {
-	var truename = $('#truename').val();
-	
-	var unLen = truename.replace(/[^\x00-\xff]/g, "**").length;
+    var truename = $('#truename').val();
+    
+    var unLen = truename.replace(/[^\x00-\xff]/g, "**").length;
     if (/^[\u4e00-\u9fa5]+$/.test($("#truename").val())  && unLen >3) {
         warning("checktruename", "&nbsp;", "show", "success");
     } else {
-        warning("checktruename", "璇疯緭鍏ユ纭鍚�", "show", "error");
+        warning("checktruename", "请输入正确姓名", "show", "error");
         return;
     }
 }
@@ -110,7 +110,7 @@ function checkName() {
 function checkSeccode() {
     var seccodeVerify = $('#seccode').val();
     if (seccodeVerify == "") {
-        warning("checkseccode", "璇疯緭鍏ラ獙璇佺爜", "show", "error");
+        warning("checkseccode", "请输入验证码", "show", "error");
         return;
     }
     $.ajax({
@@ -144,7 +144,7 @@ function warning(name, msg, type, classname) {
     $("#" + name).html(msg);
     $("#" + name).removeClass($("#" + name).attr("class")).addClass(classname);
 }
-//楠岃瘉鐮�
+//验证码
 function seccode() {
     var img = 'do.php?ac=seccode&rand=' + Math.random();
     $("#img_seccode").attr("src", img);

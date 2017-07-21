@@ -9,7 +9,7 @@
 .logreg_nav { float:left; width:228px; padding:60px 0;}
 .logreg_nav li { background:url(../images/log_nav_lixian.gif) no-repeat center top;}
 .logreg_nav li a { display:block; width:148px; padding-left:40px; height:70px; line-height:70px; font-size:20px; background:url(../images/log_nav_lixian.gif) no-repeat center bottom;}
-.logreg_nav li a.dangqian { background:url(log_nav_libg.gif) no-repeat right center; color:#00a0f3;}
+.logreg_nav li a.dangqian { background:url(../images/log_nav_libg.gif) no-repeat right center; color:#00a0f3;}
 .logreg_nav li a:hover { color:#0084f3; text-decoration:none;}
 
 .logreg_con { float:right; width:730px; padding:20px 20px 50px 20px;}
@@ -24,7 +24,7 @@
 .logreg_con ul li span.success { background-position:0 -75px;}
 .logreg_con ul li span.error { background-position:0 -31px;}
 .logreg_con ul li .tijiao { width:159px; height:51px; line-height:51px; text-align:center; color:#fff; border:none; background:url(../images/logreg_b.gif) no-repeat 0 0; font-size:20px; font-family:"寰蒋闆呴粦";}
-.logreg_con ul li .tijiao:hover { background:url(logreg_b.gif) no-repeat 0 -51px;}
+.logreg_con ul li .tijiao:hover { background:url(../images/logreg_b.gif) no-repeat 0 -51px;}
 .plwid { padding-left:150px;}
 #zhuangt,#cookietime { margin-right:3px; vertical-align:middle;}
 .logreg_con ul li .wjmm { margin-left:10px; color:#f60;}
